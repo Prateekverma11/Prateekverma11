@@ -1,0 +1,41 @@
+name: Update Live GitHub Contributions
+
+on:
+  schedule:
+    # Runs automatically every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows manual trigger anytime
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Update Contributions SVG
+        run: python scripts/update_contributions.py
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/contributions.svg
+          if git diff --staged --quiet; then
+            echo "No changes in contributions."
+          else
+            git commit -m "📊 Auto-update real-time contributions [skip ci]"
+            git push
+          fi

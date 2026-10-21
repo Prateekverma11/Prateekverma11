@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 190" width="100%" height="100%">
+  <defs>
+    <style>
+      .card-bg {
+        fill: #0b101b;
+        stroke: #162032;
+        stroke-width: 1.2;
+      }
+      .card-bg:hover {
+        stroke: #1e3a5f;
+      }
+      .font-main {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      .accent-blue {
+        fill: #0284c7;
+      }
+      .text-white {
+        fill: #ffffff;
+        font-weight: 600;
+      }
+      .text-muted {
+        fill: #8b9cb3;
+        font-weight: 400;
+      }
+      .text-bold {
+        fill: #ffffff;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <!-- Left Card: Bio Paragraph with Accent Bar -->
+  <g transform="translate(0, 0)">
+    <rect width="525" height="190" rx="12" class="card-bg" />
+    
+    <!-- Vertical Cyan/Blue Accent Bar -->
+    <rect x="22" y="32" width="3.5" height="126" rx="2" fill="#0284c7" />
+
+    <!-- Text content inside left card -->
+    <text x="42" y="58" class="font-main" font-size="14.5" fill="#94a3b8" letter-spacing="0.2">
+      <tspan>I'm a </tspan>
+      <tspan fill="#ffffff" font-weight="700">Full Stack Developer</tspan>
+      <tspan> focused on building real-time</tspan>
+    </text>
+    <text x="42" y="85" class="font-main" font-size="14.5" fill="#94a3b8" letter-spacing="0.2">
+      web applications and solving real-world problems.
+    </text>
+    <text x="42" y="112" class="font-main" font-size="14.5" fill="#94a3b8" letter-spacing="0.2">
+      I enjoy working on scalable systems, learning new
+    </text>
+    <text x="42" y="139" class="font-main" font-size="14.5" fill="#94a3b8" letter-spacing="0.2">
+      technologies, and turning ideas into working products.
+    </text>
+  </g>
+
+  <!-- Right Card: 4 Highlights with Icons -->
+  <g transform="translate(545, 0)">
+    <rect width="405" height="190" rx="12" class="card-bg" />
+
+    <!-- Item 1: B.Tech Student -->
+    <g transform="translate(24, 30)">
+      <!-- Graduation Icon -->
+      <path d="M 4 11 L 18 4 L 32 11 L 18 18 Z" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round" />
+      <path d="M 10 14.5 L 10 23 C 10 27 26 27 26 23 L 26 14.5" fill="none" stroke="#38bdf8" stroke-width="1.8" />
+      <path d="M 32 11 L 32 21" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
+      <!-- Text -->
+      <text x="44" y="9" class="font-main text-white" font-size="13.5">B.Tech Student</text>
+      <text x="44" y="25" class="font-main text-muted" font-size="12">JECRC University</text>
+    </g>
+
+    <!-- Item 2: Full Stack Developer -->
+    <g transform="translate(24, 70)">
+      <!-- Laptop Icon -->
+      <rect x="7" y="5" width="22" height="15" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.8" />
+      <line x1="3" y1="23" x2="33" y2="23" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+      <!-- Text -->
+      <text x="44" y="9" class="font-main text-white" font-size="13.5">Full Stack Developer</text>
+      <text x="44" y="25" class="font-main text-muted" font-size="12">MERN • Next.js • Node.js</text>
+    </g>
+
+    <!-- Item 3: Currently Learning -->
+    <g transform="translate(24, 110)">
+      <!-- Rocket Icon -->
+      <path d="M 23 5 C 17 5 11 11 11 17 C 8 19 6 23 6 25 C 8 25 12 23 14 20 C 20 20 26 14 26 8 Z" fill="none" stroke="#f43f5e" stroke-width="1.8" stroke-linejoin="round" />
+      <circle cx="18" cy="12" r="2.5" fill="#f43f5e" />
+      <path d="M 8 23 L 5 26" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" />
+      <!-- Text -->
+      <text x="44" y="9" class="font-main text-white" font-size="13.5">Currently Learning</text>
+      <text x="44" y="25" class="font-main text-muted" font-size="12">DSA • System Design</text>
+    </g>
+
+    <!-- Item 4: Goal -->
+    <g transform="translate(24, 150)">
+      <!-- Target / Bullseye Icon -->
+      <circle cx="18" cy="14" r="11" fill="none" stroke="#f97316" stroke-width="1.8" />
+      <circle cx="18" cy="14" r="6" fill="none" stroke="#f97316" stroke-width="1.6" />
+      <circle cx="18" cy="14" r="2" fill="#f97316" />
+      <!-- Text -->
+      <text x="44" y="9" class="font-main text-white" font-size="13.5">Goal</text>
+      <text x="44" y="25" class="font-main text-muted" font-size="12">Build impactful products</text>
+    </g>
+  </g>
+</svg>

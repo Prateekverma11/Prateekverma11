@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prateekverma11 (Prateek verma) · GitHub Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #070a12;
+      color: #e2e8f0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* GitHub Navbar */
+    .gh-navbar {
+      background-color: #05070f;
+      border-bottom: 1px solid #162032;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .gh-navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .gh-logo {
+      fill: #ffffff;
+    }
+    .user-pill {
+      font-weight: 600;
+      font-size: 14px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .search-box {
+      background-color: #0b101b;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      padding: 6px 14px;
+      color: #64748b;
+      font-size: 13px;
+      width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search-kbd {
+      border: 1px solid #334155;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 11px;
+    }
+    .gh-navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #94a3b8;
+    }
+    .nav-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 12px;
+    }
+
+    /* Sub Navigation Tabs */
+    .gh-tabs {
+      border-bottom: 1px solid #162032;
+      padding: 0 32px;
+      display: flex;
+      gap: 24px;
+      background-color: #070a12;
+    }
+    .tab-item {
+      padding: 14px 4px;
+      font-size: 14px;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .tab-item:hover {
+      color: #ffffff;
+    }
+    .tab-item.active {
+      color: #ffffff;
+      font-weight: 600;
+      border-bottom-color: #f97316;
+    }
+    .tab-counter {
+      background-color: #162032;
+      color: #94a3b8;
+      font-size: 12px;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 36px;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .avatar-wrapper {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    .avatar-svg {
+      width: 100%;
+      height: 100%;
+    }
+    .status-emoji {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .profile-names {
+      margin-top: 4px;
+    }
+    .profile-fullname {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .profile-username {
+      font-size: 17px;
+      color: #94a3b8;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    .btn-edit-profile {
+      background-color: #0b101b;
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      padding: 7px 0;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-edit-profile:hover {
+      background-color: #162032;
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+    .profile-bio {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+    .meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .meta-item a {
+      color: #38bdf8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-divider {
+      border-top: 1px solid #162032;
+      margin: 4px 0;
+    }
+    .sidebar-section-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .badges-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      position: relative;
+    }
+    .badge-sub {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 4px;
+      border-radius: 6px;
+    }
+    .pro-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #a855f7;
+      color: #c084fc;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .org-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: #6366f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Right Main Content */
+    .readme-box {
+      border: 1px solid #162032;
+      border-radius: 10px;
+      background-color: #070a12;
+      overflow: hidden;
+    }
+    .readme-header {
+      padding: 12px 18px;
+      background-color: #05070f;
+      border-bottom: 1px solid #162032;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+    .readme-header-left {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .readme-header-left span {
+      color: #64748b;
+    }
+    .readme-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Sections */
+    .section-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .section-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .section-link {
+      font-size: 13px;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11.5px;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    .live-pulse {
+      width: 7px;
+      height: 7px;
+      background: #38bdf8;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #38bdf8;
+      animation: blink 2s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Banner Image */
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top GitHub Header -->
+  <header class="gh-navbar">
+    <div class="gh-navbar-left">
+      <svg class="gh-logo" height="32" viewBox="0 0 16 16" width="32">
+        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+      </svg>
+      <div class="user-pill">
+        Prateekverma11
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="#94a3b8"><path d="M2 4l4 4 4-4z"></path></svg>
+      </div>
+    </div>
+    <div class="search-box">
+      <span>Type <span class="search-kbd">/</span> to search</span>
+      <svg width="14" height="14" fill="#64748b" viewBox="0 0 16 16"><path d="M11.5 7a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.82 4.74a6 6 0 1 0-1.06 1.06l3.04 3.04a.75.75 0 1 0 1.06-1.06l-3.04-3.04Z"></path></svg>
+    </div>
+    <div class="gh-navbar-right">
+      <span class="live-badge"><span class="live-pulse"></span> Live Contribution Sync Active</span>
+      <div class="nav-avatar">P</div>
+    </div>
+  </header>
+
+  <!-- GitHub Tabs -->
+  <nav class="gh-tabs">
+    <div class="tab-item active">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.244a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.244a2.25 2.25 0 0 0-1.506.572l-.75.642V3.75a2.25 2.25 0 0 0-2.25-2.25H1.5v10h3.5a.75.75 0 0 1 0 1.5h-4.25a.75.75 0 0 1-.75-.75V1.75Z"></path></svg>
+      Overview
+    </div>
+    <div class="tab-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5Z"></path></svg>
+      Repositories <span class="tab-counter">29</span>
+    </div>
+    <div class="tab-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0ZM1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25ZM11.75 3a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-1.5 0v-7.5a.75.75 0 0 1 .75-.75Zm-8.25.75a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-1.5 0v-5.5ZM8 3a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 3Z"></path></svg>
+      Projects
+    </div>
+    <div class="tab-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.757-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677Zm11 5.372V5.677L8.75 8.432v5.516l4.625-2.683a.25.25 0 0 0 .125-.216Z"></path></svg>
+      Packages
+    </div>
+    <div class="tab-item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>
+      Stars
+    </div>
+  </nav>
+
+  <!-- Content Grid -->
+  <div class="main-container">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="avatar-wrapper">
+        <!-- Exact geometric identicon matching screenshot -->
+        <svg class="avatar-svg" viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="#ffffff" />
+          <!-- Purple geometric pattern -->
+          <rect x="18" y="16" width="16" height="32" fill="#9C67D3" />
+          <rect x="42" y="16" width="16" height="24" fill="#9C67D3" />
+          <rect x="66" y="16" width="16" height="32" fill="#9C67D3" />
+          <rect x="18" y="40" width="64" height="16" fill="#9C67D3" />
+          <rect x="42" y="56" width="16" height="20" fill="#9C67D3" />
+          <rect x="18" y="66" width="20" height="14" fill="#9C67D3" />
+          <rect x="62" y="66" width="20" height="14" fill="#9C67D3" />
+        </svg>
+        <div class="status-emoji" title="Set status">😊</div>
+      </div>
+
+      <div class="profile-names">
+        <h1 class="profile-fullname">Prateek verma</h1>
+        <div class="profile-username">Prateekverma11</div>
+      </div>
+
+      <button class="btn-edit-profile">Edit profile</button>
+
+      <p class="profile-bio">
+        Full Stack Developer building real-time applications and solving real-world problems.
+      </p>
+
+      <ul class="meta-list">
+        <li class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1 0 9.192Zm-4.243-7.778a2.5 2.5 0 1 0-3.535 3.535 2.5 2.5 0 0 0 3.535-3.535Z"></path></svg>
+          Jaipur, Rajasthan
+        </li>
+        <li class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-7.581-6.5 3.656-6.5-3.656V3.75a.25.25 0 0 1 .25-.25h12.5a.25.25 0 0 1 .25.25v.92Z"></path></svg>
+          <a href="mailto:prateek.verma.s.124@kalvium.community">prateek.verma.s.124@kalvium.community</a>
+        </li>
+        <li class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a3.5 3.5 0 0 0 4.95 0 .751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042 5 5 0 0 1-7.07 0l-2.5-2.5a5 5 0 0 1 7.07-7.07l1.25 1.25a.75.75 0 1 1-1.06 1.06L7.6 4.455a3.5 3.5 0 0 0-4.95 4.95l2.5 2.5Z"></path></svg>
+          <a href="https://www.linkedin.com/in/prateekverma11" target="_blank">https://www.linkedin.com/in/prateekverma11</a>
+        </li>
+        <li class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a3.5 3.5 0 0 0 4.95 0 .751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042 5 5 0 0 1-7.07 0l-2.5-2.5a5 5 0 0 1 7.07-7.07l1.25 1.25a.75.75 0 1 1-1.06 1.06L7.6 4.455a3.5 3.5 0 0 0-4.95 4.95l2.5 2.5Z"></path></svg>
+          <a href="https://github.com/Prateekverma11" target="_blank">https://github.com/Prateekverma11</a>
+        </li>
+        <li class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a3.5 3.5 0 0 0 4.95 0 .751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042 5 5 0 0 1-7.07 0l-2.5-2.5a5 5 0 0 1 7.07-7.07l1.25 1.25a.75.75 0 1 1-1.06 1.06L7.6 4.455a3.5 3.5 0 0 0-4.95 4.95l2.5 2.5Z"></path></svg>
+          <a href="https://leetcode.com/u/prateekverma11" target="_blank">https://leetcode.com/u/prateekverma11</a>
+        </li>
+      </ul>
+
+      <div class="section-divider"></div>
+
+      <div>
+        <div class="sidebar-section-title">Achievements</div>
+        <div class="badges-row">
+          <div class="badge-icon" title="Quickdraw">
+            ⚡<span class="badge-sub">x2</span>
+          </div>
+          <div class="badge-icon" title="Pull Shark">
+            🦈
+          </div>
+          <div class="badge-icon" title="YOLO">
+            🛸
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div>
+        <div class="sidebar-section-title">Highlights</div>
+        <div class="pro-pill">PRO</div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div>
+        <div class="sidebar-section-title">Organizations</div>
+        <div class="org-box">K</div>
+      </div>
+    </aside>
+
+    <!-- Main Column: README Container -->
+    <main>
+      <div class="readme-box">
+        <div class="readme-header">
+          <div class="readme-header-left">
+            <span>Prateekverma11 /</span> README.md
+          </div>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="#94a3b8" style="cursor: pointer;"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-1.238 1.086-1.086a.25.25 0 0 0 0-.354l-1.086-1.086a.25.25 0 0 0-.354 0L10.64 3.666Z"></path></svg>
+        </div>
+
+        <div class="readme-body">
+          <!-- 1. Header Banner -->
+          <div>
+            <img src="./assets/banner.svg" alt="Prateek Verma" class="responsive-img" />
+          </div>
+
+          <!-- 2. About Me -->
+          <div>
+            <div class="section-title">👋 About Me</div>
+            <img src="./assets/about.svg" alt="About Me" class="responsive-img" />
+          </div>
+
+          <!-- 3. Tech Stack -->
+          <div>
+            <div class="section-title">🛠 Tech Stack</div>
+            <img src="./assets/tech-stack.svg" alt="Tech Stack" class="responsive-img" />
+          </div>
+
+          <!-- 4. GitHub Contributions -->
+          <div>
+            <div class="section-header-flex">
+              <div class="section-title" style="margin-bottom:0;">📊 GitHub Contributions</div>
+              <span class="live-badge"><span class="live-pulse"></span> Auto-Syncing</span>
+            </div>
+            <a href="https://github.com/Prateekverma11" target="_blank">
+              <img id="contrib-img" src="./assets/contributions.svg" alt="GitHub Contributions" class="responsive-img" />
+            </a>
+          </div>
+
+          <!-- 5. Featured Projects -->
+          <div>
+            <div class="section-header-flex">
+              <div class="section-title" style="margin-bottom:0;">🚀 Featured Projects</div>
+              <a href="https://github.com/Prateekverma11?tab=repositories" target="_blank" class="section-link">View all repositories &rarr;</a>
+            </div>
+            <div class="project-grid">
+              <a href="https://github.com/Prateekverma11/JeevSetu" target="_blank">
+                <img src="./assets/card-jeevsetu.svg" alt="JeevSetu" class="responsive-img" />
+              </a>
+              <a href="https://github.com/Prateekverma11/FXpulse" target="_blank">
+                <img src="./assets/card-fxpulse.svg" alt="FXpulse" class="responsive-img" />
+              </a>
+              <a href="https://github.com/Prateekverma11/campus-lost-found" target="_blank">
+                <img src="./assets/card-campus-lost-found.svg" alt="campus-lost-found" class="responsive-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

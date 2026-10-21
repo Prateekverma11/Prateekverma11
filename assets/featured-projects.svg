@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 165" width="100%" height="100%">
+  <defs>
+    <style>
+      .card {
+        fill: #0b101b;
+        stroke: #162032;
+        stroke-width: 1.2;
+      }
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      .title {
+        fill: #38bdf8;
+        font-weight: 700;
+        font-size: 14.5px;
+      }
+      .desc {
+        fill: #8b9cb3;
+        font-size: 11.5px;
+        font-weight: 400;
+      }
+      .meta {
+        fill: #94a3b8;
+        font-size: 11px;
+        font-weight: 400;
+      }
+    </style>
+  </defs>
+
+  <!-- Card 1: JeevSetu (x: 0) -->
+  <g transform="translate(0, 0)">
+    <rect width="303" height="165" rx="10" class="card" />
+    <g transform="translate(16, 16)">
+      <path d="M 2 4 C 2 2.9 2.9 2 4 2 L 8 2 L 10 4 L 14 4 C 15.1 4 16 4.9 16 6 L 16 14 C 16 15.1 15.1 16 14 16 L 4 16 C 2.9 16 2 15.1 2 14 Z" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+    </g>
+    <text x="38" y="29" class="font-sans title">JeevSetu</text>
+    <rect x="108" y="16" width="45" height="18" rx="9" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="130.5" y="29" class="font-sans" font-size="10" fill="#94a3b8" text-anchor="middle">Public</text>
+    <circle cx="285" cy="22" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="26" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="30" r="1.3" fill="#64748b" />
+    <text x="16" y="58" class="font-sans desc">Real-time animal rescue platform</text>
+    <text x="16" y="74" class="font-sans desc">connecting citizens with nearby rescuers.</text>
+    <g transform="translate(16, 112)">
+      <circle cx="4" cy="-3.5" r="3.5" fill="#38bdf8" />
+      <text x="11" y="0" class="font-sans meta">React</text>
+      <circle cx="56" cy="-3.5" r="3.5" fill="#22c55e" />
+      <text x="63" y="0" class="font-sans meta">Node.js</text>
+      <circle cx="118" cy="-3.5" r="3.5" fill="#10aa50" />
+      <text x="125" y="0" class="font-sans meta">MongoDB</text>
+      <circle cx="190" cy="-3.5" r="3.5" fill="#facc15" />
+      <text x="197" y="0" class="font-sans meta">Socket.IO</text>
+    </g>
+    <g transform="translate(16, 142)">
+      <path d="M 6 1 L 7.5 4.5 L 11 4.8 L 8.3 7.2 L 9.1 11 L 6 9 L 2.9 11 L 3.7 7.2 L 1 4.8 L 4.5 4.5 Z" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+      <text x="15" y="10" class="font-sans meta">12</text>
+      <g transform="translate(42, 0)">
+        <circle cx="3" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="9" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="6" cy="10" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 3 3.5 L 3 5 C 3 6.5 6 6.5 6 8.5 L 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 9 3.5 L 9 5 C 9 6.5 6 6.5 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="13" y="10" class="font-sans meta">3</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: FXpulse (x: 323) -->
+  <g transform="translate(323, 0)">
+    <rect width="303" height="165" rx="10" class="card" />
+    <g transform="translate(16, 16)">
+      <path d="M 2 4 C 2 2.9 2.9 2 4 2 L 8 2 L 10 4 L 14 4 C 15.1 4 16 4.9 16 6 L 16 14 C 16 15.1 15.1 16 14 16 L 4 16 C 2.9 16 2 15.1 2 14 Z" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+    </g>
+    <text x="38" y="29" class="font-sans title">FXpulse</text>
+    <rect x="100" y="16" width="45" height="18" rx="9" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="122.5" y="29" class="font-sans" font-size="10" fill="#94a3b8" text-anchor="middle">Public</text>
+    <circle cx="285" cy="22" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="26" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="30" r="1.3" fill="#64748b" />
+    <text x="16" y="58" class="font-sans desc">Live currency intelligence platform</text>
+    <text x="16" y="74" class="font-sans desc">tracking INR status and global trends.</text>
+    <g transform="translate(16, 112)">
+      <circle cx="4" cy="-3.5" r="3.5" fill="#ffffff" />
+      <text x="11" y="0" class="font-sans meta">Next.js</text>
+      <circle cx="62" cy="-3.5" r="3.5" fill="#22c55e" />
+      <text x="69" y="0" class="font-sans meta">Node.js</text>
+      <circle cx="123" cy="-3.5" r="3.5" fill="#94a3b8" />
+      <text x="130" y="0" class="font-sans meta">Flask</text>
+      <circle cx="170" cy="-3.5" r="3.5" fill="#ef4444" />
+      <text x="177" y="0" class="font-sans meta">Alpha Vantage</text>
+    </g>
+    <g transform="translate(16, 142)">
+      <path d="M 6 1 L 7.5 4.5 L 11 4.8 L 8.3 7.2 L 9.1 11 L 6 9 L 2.9 11 L 3.7 7.2 L 1 4.8 L 4.5 4.5 Z" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+      <text x="15" y="10" class="font-sans meta">8</text>
+      <g transform="translate(42, 0)">
+        <circle cx="3" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="9" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="6" cy="10" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 3 3.5 L 3 5 C 3 6.5 6 6.5 6 8.5 L 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 9 3.5 L 9 5 C 9 6.5 6 6.5 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="13" y="10" class="font-sans meta">2</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: campus-lost-found (x: 647) -->
+  <g transform="translate(647, 0)">
+    <rect width="303" height="165" rx="10" class="card" />
+    <g transform="translate(16, 16)">
+      <path d="M 2 4 C 2 2.9 2.9 2 4 2 L 8 2 L 10 4 L 14 4 C 15.1 4 16 4.9 16 6 L 16 14 C 16 15.1 15.1 16 14 16 L 4 16 C 2.9 16 2 15.1 2 14 Z" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+    </g>
+    <text x="38" y="29" class="font-sans title">campus-lost-found</text>
+    <rect x="180" y="16" width="45" height="18" rx="9" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="202.5" y="29" class="font-sans" font-size="10" fill="#94a3b8" text-anchor="middle">Public</text>
+    <circle cx="285" cy="22" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="26" r="1.3" fill="#64748b" />
+    <circle cx="285" cy="30" r="1.3" fill="#64748b" />
+    <text x="16" y="58" class="font-sans desc">Lost and Found platform for college</text>
+    <text x="16" y="74" class="font-sans desc">campus with real-time updates.</text>
+    <g transform="translate(16, 112)">
+      <circle cx="4" cy="-3.5" r="3.5" fill="#38bdf8" />
+      <text x="11" y="0" class="font-sans meta">React</text>
+      <circle cx="56" cy="-3.5" r="3.5" fill="#22c55e" />
+      <text x="63" y="0" class="font-sans meta">Node.js</text>
+      <circle cx="118" cy="-3.5" r="3.5" fill="#10aa50" />
+      <text x="125" y="0" class="font-sans meta">MongoDB</text>
+    </g>
+    <g transform="translate(16, 142)">
+      <path d="M 6 1 L 7.5 4.5 L 11 4.8 L 8.3 7.2 L 9.1 11 L 6 9 L 2.9 11 L 3.7 7.2 L 1 4.8 L 4.5 4.5 Z" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+      <text x="15" y="10" class="font-sans meta">5</text>
+      <g transform="translate(42, 0)">
+        <circle cx="3" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="9" cy="2" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <circle cx="6" cy="10" r="1.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 3 3.5 L 3 5 C 3 6.5 6 6.5 6 8.5 L 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <path d="M 9 3.5 L 9 5 C 9 6.5 6 6.5 6 8.5" fill="none" stroke="#94a3b8" stroke-width="1.2" />
+        <text x="13" y="10" class="font-sans meta">1</text>
+      </g>
+    </g>
+  </g>
+</svg>
