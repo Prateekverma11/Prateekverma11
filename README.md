@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./prateek_verma_minimal_typing_animation.gif" width="100%" />
+  <img src="./prateek_verma_animate_once.gif" width="100%" />
 </p>
