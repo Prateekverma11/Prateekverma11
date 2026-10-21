@@ -2,9 +2,9 @@ name: Update Live GitHub Contributions
 
 on:
   schedule:
-    # Runs automatically every 6 hours
-    - cron: '0 */6 * * *'
-  workflow_dispatch: # Allows manual trigger anytime
+    # Runs automatically every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows manual instant trigger anytime from GitHub Actions tab
   push:
     branches:
       - main
@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Update Contributions SVG
+      - name: Run Accurate Live Contributions Sync
         run: python scripts/update_contributions.py
 
       - name: Commit and Push if Changed
@@ -36,6 +36,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes in contributions."
           else
-            git commit -m "📊 Auto-update real-time contributions [skip ci]"
+            git commit -m "📊 Real-time sync: update live GitHub contribution heatmap [skip ci]"
             git push
           fi
